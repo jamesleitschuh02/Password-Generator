@@ -63,5 +63,22 @@ function makeit(ArrLength, numeric, lower, upper, special, arr){
     arr[i] = string[Math.floor(Math.random() * string.length + 1)];
   };
 
+  if (lower === true){
+    arr.push(alphLow[Math.floor(Math.random() * alphLow.length + 1)]);
+    arr.shift();
+  }
+  if (upper === true){
+    arr.push(alphHigh[Math.floor(Math.random() * alphHigh.length + 1)]);
+    arr.shift();
+  }
+  if (special === true){
+    arr.push(alphSpec[Math.floor(Math.random() * alphSpec.length + 1)]);
+    arr.shift();
+  }
+  if (numeric === true){
+    arr.push(alphNum[Math.floor(Math.random() * alphNum.length + 1)]);   
+    arr.shift();
+  }
+
   return arr;
 }
